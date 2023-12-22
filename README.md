@@ -575,5 +575,26 @@ function createSecretHolder(secretj) {
   return obj;
 }
 ```
+```javascript
+function func23()
+{
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', 'https://api.thecatapi.com/v1/images/search', true);
+
+     xhr.onload = function() {
+    if (xhr.status === 200) {
+      var responseData = JSON.parse(xhr.responseText);
+      var imageUrl = responseData[0].url;
+
+      var imageElement = document.createElement('img');
+      imageElement.src = imageUrl;
+
+      document.body.appendChild(imageElement);
+    }
+  };
+  xhr.send();   
+}
+```
+
 <h2 align="center">Вывод</h2>
 В этой лабораторной работе я научился работать с API на javascript.
